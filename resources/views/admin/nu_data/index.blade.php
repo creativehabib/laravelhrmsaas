@@ -5,7 +5,7 @@
     {!! HTML::style("assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css")!!}
     {!!  HTML::style("assets/global/plugins/datatables/plugins/responsive/responsive.bootstrap.css")!!}
     {!! HTML::style('assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css')!!}
-    
+
     <!-- END PAGE LEVEL STYLES -->
 @stop
 
@@ -55,13 +55,13 @@
                                 <div class="col-xs-6">
                                     <div class="btn-group">
                                         <a class="btn purple" data-toggle="modal" onclick="showAdd()">
-                                            
+
                                             <span class="hidden-xs"> {{ trans('core.btnAddnuData') }} </span><i class="fa fa-plus fa-fw"></i> </a>
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                    <div class="pull-right">
-                                        
+
                                     <a class="btn purple btn-sm"  href="{{ route('admin.pdf') }}" ><i class="fa fa-download"></i> Download</a>
                                         <a href="{{route('admin.employees.export') }}" class="btn red">
                                             <i class="fa fa-file-excel-o"></i> <span class="hidden-xs">{{ trans('core.export') }}</span>
@@ -122,7 +122,7 @@
                 <div class="modal-header">
                     <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
                     <h4 id="myLargeModalLabel" class="modal-title">
-                        Salary Slip
+                        Nu data info
                     </h4>
                 </div>
                 <div class="modal-body" id="modal-data">
@@ -162,11 +162,11 @@
                 {
                     name: 'created_at.timestamp',
                     data: {_: 'created_at.display', sort: 'created_at.timestamp' }
-                }, 
+                },
                 { data: 'edit', name: 'edit', "bSortable": false ,sClass:'text-center' }
             ],
 
-            
+
 
             "lengthMenu": [
                 [5, 15, 20, -1],

@@ -94,7 +94,7 @@
             <td>
                 <table class="payment_details">
                     <tr>
-                    <th style="text-align: center;" colspan="2">@lang("core.paymentInfo")</th>
+                    <th style="text-align: center;" colspan="2">{{ $pageTitle }}</th>
                 </tr>
                 <tr>
                     <td><strong>@lang("core.payType")</strong></td>
