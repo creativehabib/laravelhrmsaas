@@ -56,11 +56,11 @@ class NudataController extends AdminBaseController
             })
             ->addIndexColumn()
             ->addColumn('edit', function ($row) {
-            $string = '<a  class="btn purple btn-sm"  href="javascript:;" onclick="showEdit(' . $row->id . ');return false;" ><i class="fa fa-edit fa-fw"></i> <span class="hidden-sm hidden-xs">' . trans('core.edit') . '</span></a>' .
+            $string = '<a  data-toggle="modal" data-target=".show_notice" class="btn blue btn-sm" onclick="show_salary_slip(' . $row->id . ')" href="javascript:;" ><i class="fa fa-eye"></i> View</a>'.'<a  class="btn purple btn-sm"  href="javascript:;" onclick="showEdit(' . $row->id . ');return false;" ><i class="fa fa-edit fa-fw"></i> <span class="hidden-sm hidden-xs">' . trans('core.edit') . '</span></a>' .
                 '<a class="btn red btn-sm" href="javascript:;" onclick="del(\'' .
                     $row->id . '\',\'' . addslashes($row->fileno) .
                     '\')"><i class="fa fa-trash fa-fw"></i><span class="hidden-sm hidden-xs"> ' .
-                    trans("core.btnDelete") . '</span></a>'.'<a  data-toggle="modal" data-target=".show_notice" class="btn blue btn-sm" onclick="show_salary_slip(' . $row->id . ')" href="javascript:;" ><i class="fa fa-eye"></i> View</a>';
+                    trans("core.btnDelete") . '</span></a>';
 
             return $string;
         })
