@@ -7,7 +7,6 @@ use App\Http\Controllers\AdminBaseController;
 use App\Http\Requests\Admin\NuData\StoreRequest;
 use App\Http\Requests\Admin\NuData\UpdateRequest;
 use App\Models\Nudata;
-use App\Models\Plan;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
 use Yajra\DataTables\Facades\DataTables;
@@ -37,7 +36,6 @@ class NudataController extends AdminBaseController
 
     public function index()
     {
-        $plans = Plan::all();
 
         return View::make('admin.nu_data.index', $this->data);
     }
